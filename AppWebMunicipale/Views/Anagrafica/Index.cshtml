@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Anagrafica>
+
+<h2>Elenco Anagrafiche</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th class="textColor">Nome</th>
+            <th class="textColor">Cognome</th>
+            <th class="textColor">Indirizzo</th>
+            <th class="textColor">Codice Fiscale</th>
+            <th class="textColor">Azioni</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="textColor">@item.Nome</td>
+                <td class="textColor">@item.Cognome</td>
+                <td class="textColor">@item.Indirizzo</td>
+                <td class="textColor">@item.CodFisc</td>
+                <td class="textColor">
+                    <a class="btn btn-primary" href="@Url.Action("Edit", new { id = item.IdAnagrafica })">Modifica</a>
+                    <a class="btn btn-danger" href="@Url.Action("Delete", new { id = item.IdAnagrafica })">Elimina</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a class="btn btn-success textColor" href="@Url.Action("Create")">Aggiungi Nuova Anagrafica</a>

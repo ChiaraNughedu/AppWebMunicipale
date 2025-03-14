@@ -1,0 +1,46 @@
+﻿@model AppWebMunicipale.Models.Anagrafica
+
+<h2>Modifica Anagrafica</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="IdAnagrafica" />
+
+    <div class="form-group">
+        <label>Nome</label>
+        <input type="text" asp-for="Nome" class="form-control" />
+        <span asp-validation-for="Nome" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Cognome</label>
+        <input type="text" asp-for="Cognome" class="form-control" />
+        <span asp-validation-for="Cognome" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Indirizzo</label>
+        <input type="text" asp-for="Indirizzo" class="form-control" />
+        <span asp-validation-for="Indirizzo" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Città</label>
+        <input type="text" asp-for="Città" class="form-control" />
+        <span asp-validation-for="Città" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>CAP</label>
+        <input type="text" asp-for="Cap" class="form-control" />
+        <span asp-validation-for="Cap" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Codice Fiscale</label>
+        <input type="text" asp-for="CodFisc" class="form-control" />
+        <span asp-validation-for="CodFisc" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Salva</button>
+    <a class="btn btn-secondary" href='@Url.Action("Index")'>Indietro</a>
+</form>

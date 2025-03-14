@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Verbale>
+
+<h2 class="textColor">Elenco Verbali</h2>
+
+<a class="btn btn-success textColor" href="@Url.Action("Create")">Crea Nuovo Verbale</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th class="textColor">Numero Verbale</th>
+            <th class="textColor">Data Verbale</th>
+            <th class="textColor">Anagrafica</th>
+            <th class="textColor">Azioni</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="textColor">@item.IdVerbale</td>
+                <td class="textColor">@item.DataViolazione.ToShortDateString()</td>
+                <td class="textColor">@item.IdAnagrafica</td>
+                <td class="textColor">
+                    <a class="btn btn-primary" href="@Url.Action("Edit", new { id = item.IdVerbale })">Modifica</a>
+                    <a class="btn btn-danger" href="@Url.Action("Delete", new { id = item.IdVerbale })">Elimina</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

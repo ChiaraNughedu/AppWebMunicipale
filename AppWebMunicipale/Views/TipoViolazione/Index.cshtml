@@ -1,0 +1,30 @@
+﻿@model IEnumerable<AppWebMunicipale.Models.TipoViolazione>
+
+@{
+    ViewData["Title"] = "Elenco Violazioni Contestabili";
+}
+
+<h2 class="textColor">Elenco Violazioni Contestabili</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th class="textColor">Id Violazione</th>
+            <th class="textColor">Descrizione</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var violazione in Model)
+        {
+            <tr>
+                <td class="textColor">@violazione.IdViolazione</td>
+                <td class="textColor">@violazione.Descrizione</td>
+               
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+

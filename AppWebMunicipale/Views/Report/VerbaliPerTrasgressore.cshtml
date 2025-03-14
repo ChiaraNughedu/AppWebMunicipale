@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Verbali per Trasgressore";
+}
+
+<h2 class="textColor">Verbali Raggruppati per Trasgressore</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th class="textColor">Trasgressore</th>
+            <th class="textColor">Numero di Verbali</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var group in Model)
+        {
+            <tr>
+                <td class="textColor">@group.TrasgressoreNome</td>
+                <td class="textColor">@group.Verbalis.Count</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,19 @@
+﻿@model Anagrafica
+
+<h2>Elimina Anagrafica</h2>
+
+<div>
+    <h4>Sei sicuro di voler eliminare questa anagrafica?</h4>
+    <div>
+        <p><strong>Nome:</strong> @Model.Nome</p>
+        <p><strong>Cognome:</strong> @Model.Cognome</p>
+        <p><strong>Codice Fiscale:</strong> @Model.CodFisc</p>
+    </div>
+</div>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="IdAnagrafica" />
+    <button type="submit" class="btn btn-danger">Elimina</button>
+    <a class="btn btn-secondary" href="@Url.Action("Index")">Annulla</a>
+</form>
+

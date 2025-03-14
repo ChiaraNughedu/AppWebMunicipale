@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Report";
+}
+
+<h1 class="textColor">Report</h1>
+
+<ul>
+    <li class="textColor">
+        <a href="@Url.Action("VerbaliPerTrasgressore", "Report")">Visualizza verbali raggruppati per trasgressore</a>
+    </li>
+    <li class="textColor">
+        <a href="@Url.Action("PuntiDecurtatiPerTrasgressore", "Report")">Totale punti decurtati raggruppati per trasgressore</a>
+    </li>
+    <li class="textColor">
+        <a href="@Url.Action("ViolazioniPuntiMaggioriDi10", "Report")">Violazioni con decurtamento punti maggiore di 10</a>
+    </li>
+    <li class="textColor">
+        <a href="@Url.Action("ViolazioniImportoMaggioreDi400", "Report")">Violazioni con importo maggiore di 400 euro</a>
+    </li>
+</ul>
